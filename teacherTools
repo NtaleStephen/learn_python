@@ -1,0 +1,1814 @@
+# Nibble Learn Teacher Tools - Complete Component Breakdown
+
+## Overview
+This document provides a detailed breakdown of all 80+ teacher-facing tools in Nibble Learn, including their design, UI/UX patterns, individual tool interfaces, and interaction flows.
+
+**Reference Platform URL**: https://app.magicschool.ai/tools
+**Total Tools**: 80+ teacher-facing AI tools
+**Time Saved**: Teachers report saving 7-10 hours per week
+
+---
+
+## TABLE OF CONTENTS
+
+1. [Teacher Tools Page Overview](#teacher-tools-page-overview)
+2. [Tool Categories](#tool-categories)
+3. [Complete Tools List](#complete-tools-list)
+4. [Common Tool Interface Design](#common-tool-interface-design)
+5. [Tool-Specific Interfaces](#tool-specific-interfaces)
+6. [Premium Features](#premium-features)
+7. [Design Specifications](#design-specifications)
+
+---
+
+## TEACHER TOOLS PAGE OVERVIEW
+
+### Page Layout
+
+#### Top Navigation Bar
+- **Logo**: Nibble Learn logo (left)
+- **Search**: Global search (center, prominent)
+- **User Menu**: Avatar dropdown (right)
+- **Upgrade Button**: "Upgrade to Plus" (if free user)
+
+---
+
+### Page Header
+
+**Welcome Message**:
+- **Text**: "Welcome back, {Teacher Name}!" or "Good afternoon!"
+- **Time-based**: Changes based on time of day
+- **Typography**: 1.5rem, bold
+- **Color**: Dark gray or purple
+
+**Quick Stats** (optional):
+- "You've saved X hours this week"
+- "5 outputs generated today"
+- Encouraging, progress-focused
+
+---
+
+### AI-Powered Search Bar
+
+**Layout**: Large, prominent search at top
+
+**Search Input**:
+- **Width**: 500-700px (desktop), full-width (mobile)
+- **Height**: 56px
+- **Placeholder**: "What do you need help with?" or "Search for a tool..."
+- **Icon**: Magnifying glass (left)
+- **Border**: 2px solid light purple
+- **Border Radius**: 28px (pill shape)
+- **Font Size**: 16px
+- **Background**: White or very light purple
+
+**AI-Powered Features**:
+- **Fuzzy Search**: No perfect phrasing needed
+- **Natural Language**: Type "lesson plan" finds related tools
+- **Auto-Suggest**: Shows tools as you type
+- **Recently Used**: Shows before typing
+- **Trending Tools**: Popular tools shown
+- **Related Tools**: "You might also like..."
+- **Smart Matching**: Finds relevant tools even with typos
+
+**Search Results Dropdown**:
+- **Tool Name**: Bold, 1rem
+- **Tool Description**: Gray, 0.875rem
+- **Category Tag**: Small purple pill
+- **Tool Icon**: 32px icon on left
+- **Click Action**: Opens tool immediately
+- **"See all results"**: Link at bottom if many matches
+
+---
+
+### Filter & Sort Section
+
+**Filter Row** (Horizontal pills):
+
+**Primary Filters**:
+1. **All Tools** (default, purple when active)
+2. **My Favorites** (starred tools)
+3. **Recently Used** (last 10 tools)
+4. **Collections** (user-created collections)
+   - Dropdown shows collection names
+   - "+ New Collection" option
+5. **Plus Only** (premium tools badge)
+6. **Labs** (beta features - Plus users)
+
+**Category Filter Dropdown**:
+- **Label**: "Category: All"
+- **Icon**: Chevron down
+- **Options**:
+  - All Tools
+  - Planning & Instruction (25+ tools)
+  - Assessment & Feedback (15+ tools)
+  - Student Support (12+ tools)
+  - Communication (10+ tools)
+  - Productivity (10+ tools)
+  - Community (8+ tools)
+
+**Sort Dropdown**:
+- **Label**: "Sort by:"
+- **Options**:
+  - Most Popular
+  - Recently Added
+  - A-Z
+  - Most Used (by you)
+  - Recommended for you
+
+**View Toggle** (Desktop only):
+- **Icon Buttons**: Grid view | List view
+- **Active**: Purple
+- **Inactive**: Gray
+
+---
+
+### Tools Grid
+
+**Layout**:
+- **Desktop**: 4 columns
+- **Tablet**: 3 columns
+- **Mobile**: 1-2 columns
+- **Gap**: 20px between cards
+
+**Card Dimensions**:
+- **Width**: Auto (fills column)
+- **Height**: ~240-280px
+- **Aspect Ratio**: Consistent
+
+---
+
+## TOOL CATEGORIES
+
+Nibble Learn organizes 80+ tools into 6 main categories:
+
+### 1. PLANNING & INSTRUCTION (~25 tools)
+Focus: Lesson planning, curriculum development, instructional design
+
+### 2. ASSESSMENT & FEEDBACK (~15 tools)
+Focus: Creating assessments, grading, providing feedback
+
+### 3. STUDENT SUPPORT (~12 tools)
+Focus: Differentiation, IEPs, accommodation, intervention
+
+### 4. COMMUNICATION (~10 tools)
+Focus: Parent emails, newsletters, letters of recommendation
+
+### 5. PRODUCTIVITY (~10 tools)
+Focus: Text tools, translation, summarization, rewriting
+
+### 6. COMMUNITY & ENGAGEMENT (~8 tools)
+Focus: Team building, class culture, engagement activities
+
+---
+
+## COMPLETE TOOLS LIST
+
+### PLANNING & INSTRUCTION TOOLS
+
+#### 1. Lesson Plan Generator
+**Description**: "Generate a lesson plan for a topic or objective you're teaching"
+**Icon**: Clipboard with checkmark
+**Input Fields**:
+- Grade Level (dropdown)
+- Topic, Standard, or Objective (textarea)
+- Additional Criteria (textarea, optional)
+- Standards to Align To (dropdown, optional)
+**Output**: Complete lesson plan with objectives, activities, materials, assessment
+**Export**: DOC, PDF, Google Docs
+
+---
+
+#### 2. Unit Plan Generator
+**Description**: "Create a multi-lesson unit plan on any topic"
+**Icon**: Calendar or multiple pages
+**Input Fields**:
+- Grade Level
+- Unit Topic
+- Number of Lessons (dropdown: 3, 5, 7, 10)
+- Standards
+- Unit Duration (weeks)
+**Output**: Unit overview + individual lesson outlines
+
+---
+
+#### 3. 5E Model Science Lesson
+**Description**: "Design a science lesson using the 5E instructional model"
+**Icon**: Science beaker or microscope
+**Input Fields**:
+- Grade Level
+- Science Topic
+- NGSS Standards (optional)
+- Available Materials (optional)
+**Output**: Lesson structured as Engage, Explore, Explain, Elaborate, Evaluate
+
+---
+
+#### 4. Presentation Generator
+**Description**: "Generate exportable slides based on any topic, video, or text"
+**Icon**: Presentation slides
+**Input Fields**:
+- Presentation Topic (text)
+- Number of Slides (dropdown: 5, 8, 10, 12, 15)
+- Grade Level
+- Key Points to Include (textarea, optional)
+**Output**: Slide-by-slide content with titles and bullet points
+**Export**: PowerPoint, Google Slides
+
+---
+
+#### 5. Lesson Hook Generator
+**Description**: "Create an engaging hook to start your lesson"
+**Icon**: Fishing hook or attention icon
+**Input Fields**:
+- Lesson Topic
+- Grade Level
+- Hook Type (dropdown: Question, Story, Activity, Fact, Video)
+**Output**: 3-5 hook ideas with implementation tips
+
+---
+
+#### 6. Standards Unpacker
+**Description**: "Break down standards into student-friendly language and learning targets"
+**Icon**: Document with magnifying glass
+**Input Fields**:
+- State/Standards Set (dropdown)
+- Standard Code/Text (text input)
+- Grade Level
+**Output**: 
+- Standard broken into components
+- "I can" statements
+- Key vocabulary
+- Assessment ideas
+
+---
+
+#### 7. Accommodation Suggestions
+**Description**: "Get ideas for accommodating students with diverse needs"
+**Icon**: Puzzle pieces or helping hand
+**Input Fields**:
+- Student Need/Challenge (textarea)
+- Grade Level
+- Subject Area
+- Activity Type (dropdown)
+**Output**: 5-10 specific accommodation strategies
+
+---
+
+#### 8. Assignment Scaffolder
+**Description**: "Break down complex assignments into manageable steps"
+**Icon**: Ladder or steps
+**Input Fields**:
+- Assignment Description (textarea)
+- Grade Level
+- Number of Steps (dropdown: 3, 5, 7, 10)
+**Output**: Step-by-step scaffolded assignment with checkpoints
+
+---
+
+#### 9. Text Leveler
+**Description**: "Rewrite any text at different reading levels"
+**Icon**: Text with up/down arrows
+**Input Fields**:
+- Original Text (textarea)
+- Current Reading Level (dropdown)
+- Target Reading Level (dropdown)
+- Preserve Key Terms (optional checkboxes)
+**Output**: Leveled text at specified reading level
+
+---
+
+#### 10. Vocabulary Scaffolder
+**Description**: "Create tiered vocabulary lists with student-friendly definitions"
+**Icon**: Dictionary or word blocks
+**Input Fields**:
+- Topic or Text (textarea)
+- Grade Level
+- Number of Words (dropdown: 10, 15, 20)
+- Tier Level (dropdown: Tier 1, 2, 3 or Mixed)
+**Output**: 
+- Vocabulary list
+- Student-friendly definitions
+- Example sentences
+- Activities for teaching
+
+---
+
+#### 11. Make It Relevant
+**Description**: "Adapt content to connect with student interests and backgrounds"
+**Icon**: Target with heart
+**Input Fields**:
+- Content/Topic (textarea)
+- Student Interests (text: gaming, sports, music, etc.)
+- Grade Level
+- Cultural Background (optional)
+**Output**: Content reframed with relevant examples and connections
+
+---
+
+#### 12. Math Story Problem Generator
+**Description**: "Create word problems for any math concept"
+**Icon**: Numbers with document
+**Input Fields**:
+- Math Concept (text)
+- Grade Level
+- Number of Problems (dropdown: 5, 10, 15)
+- Difficulty (dropdown: Easy, Medium, Hard)
+- Real-World Context (optional)
+**Output**: Word problems with answer key
+
+---
+
+#### 13. Math Spiral Review
+**Description**: "Generate practice problems that review multiple concepts"
+**Icon**: Spiral or circular arrow
+**Input Fields**:
+- Grade Level
+- Math Concepts to Include (checkboxes or text list)
+- Number of Problems per Concept
+**Output**: Mixed review problem set
+
+---
+
+#### 14. Project Outline Generator
+**Description**: "Create a structured outline for student projects"
+**Icon**: Project plan or blueprint
+**Input Fields**:
+- Project Topic
+- Grade Level
+- Project Type (dropdown: Research, Presentation, Creative, etc.)
+- Duration (weeks)
+**Output**: Project phases, milestones, deliverables
+
+---
+
+#### 15. Choice Board Generator
+**Description**: "Create a choice board with differentiated activity options"
+**Icon**: Grid with icons
+**Input Fields**:
+- Learning Objective
+- Grade Level
+- Board Size (dropdown: 3x3, 4x4)
+- Activity Types (checkboxes)
+**Output**: Choice board grid with varied activities
+
+---
+
+#### 16. DOK Questions Generator
+**Description**: "Generate questions at different Depth of Knowledge levels"
+**Icon**: Pyramid or levels
+**Input Fields**:
+- Topic or Text
+- Grade Level
+- DOK Levels Needed (checkboxes: 1, 2, 3, 4)
+- Number per Level
+**Output**: Questions organized by DOK level
+
+---
+
+#### 17. Discussion Questions
+**Description**: "Create thought-provoking discussion questions"
+**Icon**: Speech bubbles
+**Input Fields**:
+- Discussion Topic or Text
+- Grade Level
+- Question Type (dropdown: Open-ended, Socratic, Debate)
+- Number of Questions
+**Output**: Discussion questions with follow-ups
+
+---
+
+#### 18. Class Syllabus Generator
+**Description**: "Generate a course syllabus"
+**Icon**: Document with list
+**Input Fields**:
+- Course Name
+- Grade Level
+- Grading Policy preferences
+- School Policies to Include
+**Output**: Complete syllabus structure
+
+---
+
+#### 19. Weekly Agenda Generator
+**Description**: "Create a weekly class agenda"
+**Icon**: Calendar week view
+**Input Fields**:
+- Grade Level
+- Subject
+- Topics for the Week
+- Special Events
+**Output**: Day-by-day agenda
+
+---
+
+#### 20. Learning Station Activities
+**Description**: "Design activities for learning stations/centers"
+**Icon**: Multiple tables or stations
+**Input Fields**:
+- Learning Objective
+- Grade Level
+- Number of Stations (dropdown: 3, 4, 5, 6)
+- Available Materials
+**Output**: Activity descriptions for each station
+
+---
+
+#### 21. Informational Text Generator
+**Description**: "Create informational passages on any topic"
+**Icon**: Document with 'i' icon
+**Input Fields**:
+- Topic
+- Grade Level
+- Reading Level
+- Length (dropdown: Short, Medium, Long)
+**Output**: Informational text at specified level
+
+---
+
+#### 22. Real-World Scenarios
+**Description**: "Create authentic, real-world scenarios for learning"
+**Icon**: Globe or building
+**Input Fields**:
+- Academic Concept
+- Grade Level
+- Career/Field Connection
+**Output**: Realistic scenarios showing concept application
+
+---
+
+### ASSESSMENT & FEEDBACK TOOLS
+
+#### 23. Multiple Choice Quiz Generator
+**Description**: "Create a multiple choice assessment, quiz, or test based on any topic"
+**Icon**: Checkboxes or multiple choice bubble sheet
+**Input Fields**:
+- Topic or Standard
+- Grade Level
+- Number of Questions (dropdown: 5, 10, 15, 20, 25)
+- Difficulty Level (dropdown: Easy, Medium, Hard, Mixed)
+- DOK Level (optional)
+**Output**: Multiple choice questions with answer key
+**Plus Feature**: Export to Google Forms
+
+---
+
+#### 24. Rubric Generator
+**Description**: "Have AI write a rubric for an assignment in a table format"
+**Icon**: Grid or checklist
+**Input Fields**:
+- Assignment Description (textarea)
+- Grade Level
+- Number of Criteria (dropdown: 3, 4, 5, 6)
+- Performance Levels (dropdown: 3-level, 4-level, 5-level)
+**Output**: Complete rubric in table format
+**Export**: Excel, Google Sheets, DOC
+
+---
+
+#### 25. Report Card Comments Generator
+**Description**: "Generate report card comments with student's strengths and areas for growth"
+**Icon**: Report card or document with grade
+**Input Fields**:
+- Subject Area
+- Student Strengths (textarea)
+- Areas for Growth (textarea)
+- Additional Context (optional)
+- Tone (dropdown: Positive, Encouraging, Constructive)
+**Output**: 2-3 polished comment options
+**Popular Feature**: #1 most-used tool during grading periods
+
+---
+
+#### 26. Writing Feedback
+**Description**: "Give areas of strength & areas for growth on student work based on criteria"
+**Icon**: Pencil with feedback bubble
+**Input Fields**:
+- Student Writing (large textarea or file upload)
+- Assignment Criteria/Rubric (textarea)
+- Grade Level
+- Focus Areas (checkboxes: Grammar, Organization, Evidence, etc.)
+**Output**: 
+- Strengths identified
+- Areas for improvement
+- Specific suggestions
+- Next steps
+
+---
+
+#### 27. Text-Dependent Questions
+**Description**: "Create questions tied directly to a reading passage"
+**Icon**: Document with question marks
+**Input Fields**:
+- Text/Passage (textarea or file upload)
+- Grade Level
+- Number of Questions
+- Question Types (checkboxes: Literal, Inferential, Evaluative)
+**Output**: Questions with answer key and text references
+
+---
+
+#### 28. Exit Ticket Generator
+**Description**: "Create quick formative assessments to check understanding"
+**Icon**: Ticket or door with checkmark
+**Input Fields**:
+- Lesson Topic
+- Grade Level
+- Exit Ticket Type (dropdown: Questions, Reflection, Application)
+**Output**: 1-3 exit ticket prompts
+**Plus Feature**: Assign to students via Student Rooms
+
+---
+
+#### 29. Clear Directions
+**Description**: "Rewrite instructions to be clearer for students"
+**Icon**: Arrow pointing to target
+**Input Fields**:
+- Original Directions (textarea)
+- Grade Level
+- Simplify For (optional: ELL, SPED, etc.)
+**Output**: Rewritten directions with numbering and clarity
+
+---
+
+#### 30. Assignment Ideas Generator
+**Description**: "Get creative assignment ideas for any topic"
+**Icon**: Lightbulb with document
+**Input Fields**:
+- Topic or Standard
+- Grade Level
+- Assignment Type (dropdown: Individual, Group, Project, etc.)
+**Output**: 5-10 assignment ideas with descriptions
+
+---
+
+#### 31. Performance Task Designer
+**Description**: "Design authentic performance assessments"
+**Icon**: Clipboard with star
+**Input Fields**:
+- Standard or Learning Target
+- Grade Level
+- Real-World Connection desired
+**Output**: Complete performance task with rubric
+
+---
+
+#### 32. Self-Assessment Tool
+**Description**: "Create student self-reflection and self-assessment tools"
+**Icon**: Mirror or checklist
+**Input Fields**:
+- Learning Objective
+- Grade Level
+- Assessment Format (dropdown: Checklist, Rating Scale, Reflection)
+**Output**: Self-assessment questions or rubric
+
+---
+
+#### 33. Peer Review Guidelines
+**Description**: "Generate guidelines for students to give peer feedback"
+**Icon**: Two people with document
+**Input Fields**:
+- Assignment Type
+- Grade Level
+- Focus Areas for Feedback
+**Output**: Peer review questions and protocol
+
+---
+
+### STUDENT SUPPORT TOOLS
+
+#### 34. IEP Generator
+**Description**: "Generate a draft of an IEP customized to a student's needs"
+**Icon**: Document with accessibility symbol
+**Input Fields**:
+- Student Age/Grade
+- Disability Category (dropdown)
+- Current Performance Levels (textarea)
+- Areas of Need (checkboxes)
+**Output**: IEP sections including:
+  - Present levels
+  - Goals and objectives
+  - Accommodations
+  - Services
+**Note**: Includes disclaimer to review with SPED team
+**High Value**: Saves SPED teachers 2-3 hours per IEP
+
+---
+
+#### 35. BIP (Behavior Intervention Plan) Generator
+**Description**: "Create a behavior intervention plan"
+**Icon**: Document with behavior chart
+**Input Fields**:
+- Student Age/Grade
+- Behavior of Concern (textarea)
+- Function of Behavior (dropdown)
+- Data on Behavior (textarea)
+**Output**: Complete BIP with strategies
+
+---
+
+#### 36. Behavior Intervention Suggestions
+**Description**: "Get strategies for managing specific behaviors"
+**Icon**: Lightbulb with chart
+**Input Fields**:
+- Behavior Description (textarea)
+- Grade Level
+- Context (when it occurs)
+**Output**: 5-10 evidence-based intervention strategies
+
+---
+
+#### 37. Social Story Creator
+**Description**: "Generate social stories for students"
+**Icon**: Book with person
+**Input Fields**:
+- Student Age
+- Social Situation/Skill (text)
+- Desired Behavior
+**Output**: Social story script with simple language
+
+---
+
+#### 38. Exemplar & Non-Exemplar Generator
+**Description**: "Create examples and non-examples for concepts"
+**Icon**: Checkmark and X
+**Input Fields**:
+- Concept or Skill
+- Grade Level
+- Number of Each (dropdown)
+**Output**: Exemplars and non-exemplars with explanations
+
+---
+
+#### 39. Intervention Strategies
+**Description**: "Get targeted intervention ideas for struggling students"
+**Icon**: Target with tools
+**Input Fields**:
+- Skill Gap/Challenge (textarea)
+- Grade Level
+- Subject Area
+**Output**: Tiered intervention suggestions
+
+---
+
+#### 40. Gifted Education Extension
+**Description**: "Create extension activities for advanced learners"
+**Icon**: Star or trophy
+**Input Fields**:
+- Topic/Standard
+- Grade Level
+- Student Interest Areas (optional)
+**Output**: Challenging extension activities
+
+---
+
+### COMMUNICATION TOOLS
+
+#### 41. Professional Email
+**Description**: "Generate a professional email for any purpose"
+**Icon**: Envelope
+**Input Fields**:
+- Email Purpose (dropdown: Parent communication, Admin request, Colleague, etc.)
+- Key Points to Include (textarea)
+- Tone (dropdown: Professional, Friendly, Formal, Urgent)
+**Output**: Complete email with subject line
+
+---
+
+#### 42. Family Newsletter
+**Description**: "Create a newsletter to send home to families"
+**Icon**: Newspaper
+**Input Fields**:
+- Grade Level
+- Topics to Include (textarea)
+- Newsletter Period (dropdown: Weekly, Monthly)
+- Upcoming Events (optional)
+**Output**: Newsletter with sections and content
+
+---
+
+#### 43. Letter of Recommendation
+**Description**: "Generate a letter of recommendation for a student"
+**Icon**: Document with seal
+**Input Fields**:
+- Student Strengths (textarea)
+- Context (college, scholarship, job, program)
+- Student Achievements (textarea)
+- Your Relationship to Student
+**Output**: Complete letter of recommendation
+
+---
+
+#### 44. Positive Phone Call Ideas
+**Description**: "Get talking points for positive parent calls"
+**Icon**: Phone with heart
+**Input Fields**:
+- Student Strengths/Successes (textarea)
+- Grade Level
+**Output**: Conversation starters and key points
+
+---
+
+#### 45. Parent-Teacher Conference Script
+**Description**: "Prepare for parent-teacher conferences"
+**Icon**: Two people meeting
+**Input Fields**:
+- Student Name (optional for template)
+- Topics to Discuss (checkboxes)
+- Student Strengths and Concerns
+**Output**: Conference script with talking points
+
+---
+
+#### 46. Classroom Newsletter
+**Description**: "Create a classroom newsletter for families"
+**Icon**: Bulletin or newsletter
+**Input Fields**:
+- Week/Month
+- Topics Covered
+- Upcoming Events
+- Reminders
+**Output**: Newsletter template
+
+---
+
+#### 47. Thank You Note
+**Description**: "Write thank you notes to colleagues, volunteers, or parents"
+**Icon**: Note with heart
+**Input Fields**:
+- Recipient
+- What to Thank For (textarea)
+- Tone (dropdown: Warm, Professional, Heartfelt)
+**Output**: Personalized thank you note
+
+---
+
+### PRODUCTIVITY TOOLS
+
+#### 48. Text Summarizer
+**Description**: "Summarize long texts to get the main ideas quickly"
+**Icon**: Document with compress arrows
+**Input Fields**:
+- Text to Summarize (large textarea or file upload)
+- Summary Length (dropdown: Brief, Moderate, Detailed)
+- Format (dropdown: Paragraph, Bullet Points)
+**Output**: Summarized version of text
+
+---
+
+#### 49. Text Rewriter
+**Description**: "Take any text and rewrite it with custom criteria"
+**Icon**: Circular arrows around text
+**Input Fields**:
+- Original Text (textarea)
+- How to Rewrite (dropdown: Simpler, More formal, Different tone)
+- Additional Criteria (optional)
+**Output**: Rewritten text
+
+---
+
+#### 50. Text Translator
+**Description**: "Translate text into 30+ languages"
+**Icon**: Globe with language symbols
+**Input Fields**:
+- Text to Translate (textarea)
+- From Language (dropdown)
+- To Language (dropdown: Spanish, Mandarin, French, Arabic, +30 more)
+**Output**: Translated text
+**High Value**: Critical for ELL communication
+
+---
+
+#### 51. Text Proofreader
+**Description**: "Check and correct grammar, spelling, punctuation"
+**Icon**: Magnifying glass over text
+**Input Fields**:
+- Text to Proofread (textarea)
+**Output**: Corrected text with tracked changes
+
+---
+
+#### 52. Song Lyrics Generator
+**Description**: "Create educational song lyrics to teach concepts"
+**Icon**: Musical note
+**Input Fields**:
+- Topic to Teach
+- Grade Level
+- Song Style (dropdown: Pop, Rap, Country, etc.)
+- Key Concepts (textarea)
+**Output**: Educational song lyrics
+**Fun Factor**: Highly engaging for students
+
+---
+
+#### 53. Joke Generator
+**Description**: "Generate age-appropriate jokes for your class"
+**Icon**: Smiley face
+**Input Fields**:
+- Topic (optional)
+- Grade Level
+- Joke Type (dropdown: Puns, Riddles, Knock-knock)
+**Output**: 5-10 jokes
+
+---
+
+#### 54. Saying Simplifier
+**Description**: "Explain idioms and figurative language"
+**Icon**: Speech bubble with lightbulb
+**Input Fields**:
+- Idiom or Saying (text)
+- Grade Level
+**Output**: 
+- Simple explanation
+- Example in context
+- Origin (if applicable)
+
+---
+
+### COMMUNITY & ENGAGEMENT TOOLS
+
+#### 55. Team Builder Activities
+**Description**: "Create activities to build classroom community"
+**Icon**: Group of people or hands joined
+**Input Fields**:
+- Grade Level
+- Activity Duration (dropdown: 5, 10, 15, 30 min)
+- Group Size (dropdown: Pairs, Small groups, Whole class)
+**Output**: Team building activity with instructions
+
+---
+
+#### 56. Ice Breaker Generator
+**Description**: "Generate ice breaker questions and activities"
+**Icon**: Ice cube breaking
+**Input Fields**:
+- Grade Level
+- Icebreaker Type (dropdown: Questions, Games, Movement)
+- Time Available
+**Output**: 5-10 icebreaker ideas
+
+---
+
+#### 57. Class Norms & Expectations
+**Description**: "Create classroom rules and expectations"
+**Icon**: Document with checkmark
+**Input Fields**:
+- Grade Level
+- Key Values (checkboxes: Respect, Responsibility, Safety, etc.)
+- Teaching Style/Philosophy (optional)
+**Output**: Class norms list with explanations
+
+---
+
+#### 58. Student Survey Generator
+**Description**: "Create surveys to get student feedback"
+**Icon**: Clipboard with checkboxes
+**Input Fields**:
+- Survey Purpose (text)
+- Grade Level
+- Number of Questions
+- Question Types (checkboxes: Multiple choice, Scale, Open-ended)
+**Output**: Survey questions
+**Export**: Google Forms
+
+---
+
+#### 59. Get to Know You Questions
+**Description**: "Generate questions to learn about your students"
+**Icon**: Question mark with person
+**Input Fields**:
+- Grade Level
+- Context (dropdown: First day, Throughout year)
+- Number of Questions
+**Output**: Student interest/background questions
+
+---
+
+#### 60. Class Incentive Ideas
+**Description**: "Get ideas for classroom rewards and incentives"
+**Icon**: Trophy or star
+**Input Fields**:
+- Grade Level
+- Incentive Type (dropdown: Individual, Group, Low-cost, No-cost)
+**Output**: 10-15 incentive ideas
+
+---
+
+#### 61. Restorative Circle Questions
+**Description**: "Generate questions for restorative practice circles"
+**Icon**: Circle of people
+**Input Fields**:
+- Circle Purpose (dropdown: Check-in, Conflict resolution, Community building)
+- Grade Level
+**Output**: Circle protocol and questions
+
+---
+
+### QUESTION GENERATORS
+
+#### 62. YouTube Video Questions
+**Description**: "Generate comprehension questions for any YouTube video"
+**Icon**: YouTube play button with question mark
+**Input Fields**:
+- YouTube Video URL (paste link)
+- Grade Level
+- Number of Questions
+- Question Types (checkboxes)
+**Output**: Questions with timestamps
+**High Value**: Saves time previewing and writing questions
+
+---
+
+#### 63. Reading Comprehension Questions
+**Description**: "Create questions to check reading comprehension"
+**Icon**: Book with question mark
+**Input Fields**:
+- Text or Passage (textarea)
+- Grade Level
+- Question Levels (checkboxes: Literal, Inferential, Evaluative)
+- Number of Questions
+**Output**: Comprehension questions with answers
+
+---
+
+### ADDITIONAL SPECIALIZED TOOLS
+
+#### 64. Worksheet Generator
+**Description**: "Generate a worksheet based on any topic or text"
+**Icon**: Document with lines
+**Input Fields**:
+- Topic or Standard
+- Grade Level
+- Worksheet Type (dropdown: Practice, Review, Application)
+- Number of Problems/Questions
+**Output**: Complete worksheet with answer key
+
+---
+
+#### 65. Warm-Up & Bell Ringer
+**Description**: "Create quick activities to start class"
+**Icon**: Bell or clock
+**Input Fields**:
+- Subject
+- Grade Level
+- Duration (dropdown: 5, 10 min)
+- Connection to Lesson (optional)
+**Output**: Bell ringer activity
+
+---
+
+#### 66. Closure Activity
+**Description**: "Design activities to end your lesson effectively"
+**Icon**: Door with checkmark
+**Input Fields**:
+- Lesson Objective
+- Grade Level
+- Time Available
+**Output**: Closure activity options
+
+---
+
+#### 67. Science Lab Generator
+**Description**: "Create science lab procedures and materials lists"
+**Icon**: Beaker or lab equipment
+**Input Fields**:
+- Science Concept
+- Grade Level
+- Lab Type (dropdown: Demo, Hands-on, Virtual)
+- Available Materials (optional)
+**Output**: Complete lab procedure with safety notes
+
+---
+
+#### 68. SAT/ACT Prep Questions
+**Description**: "Generate test prep questions"
+**Icon**: Test paper with #2 pencil
+**Input Fields**:
+- Test Type (dropdown: SAT, ACT)
+- Section (dropdown: Math, Reading, Writing, Science)
+- Number of Questions
+**Output**: Practice questions with explanations
+
+---
+
+#### 69. Group Work Roles
+**Description**: "Define roles for collaborative group work"
+**Icon**: Multiple people with labels
+**Input Fields**:
+- Grade Level
+- Group Size (dropdown: 2, 3, 4, 5, 6)
+- Project Type
+**Output**: Role descriptions and responsibilities
+
+---
+
+#### 70. Compare & Contrast Generator
+**Description**: "Create comparison activities and organizers"
+**Icon**: Venn diagram
+**Input Fields**:
+- Items to Compare
+- Grade Level
+- Organizer Type (dropdown: Venn, T-Chart, Matrix)
+**Output**: Completed comparison with key points
+
+---
+
+#### 71. Newsletter Translation
+**Description**: "Translate newsletters into multiple languages"
+**Icon**: Newsletter with globe
+**Input Fields**:
+- Original Newsletter (textarea)
+- Target Languages (checkboxes)
+**Output**: Translated versions
+
+---
+
+#### 72. Academic Content Generator
+**Description**: "Generate original academic content customized to criteria"
+**Icon**: Document with sparkle
+**Input Fields**:
+- Topic
+- Grade Level
+- Content Type (dropdown: Passage, Article, Text)
+- Reading Level
+- Length
+- Criteria (textarea)
+**Output**: Custom academic content
+
+---
+
+#### 73. PBL Unit Generator
+**Description**: "Design project-based learning units"
+**Icon**: Project blueprint
+**Input Fields**:
+- Driving Question
+- Grade Level
+- Subject/Standards
+- Project Duration
+**Output**: Complete PBL unit outline
+
+---
+
+#### 74. Accommodations Generator (504/IEP)
+**Description**: "Generate specific accommodations for plans"
+**Icon**: Document with accessibility
+**Input Fields**:
+- Disability/Need
+- Grade Level
+- Areas Needing Support
+**Output**: Detailed accommodation suggestions
+
+---
+
+#### 75. Vertical Alignment Tool
+**Description**: "See how concepts progress across grade levels"
+**Icon**: Ladder or arrows going up
+**Input Fields**:
+- Concept/Standard
+- Grade Range
+**Output**: Progression map showing development
+
+---
+
+#### 76. Data Chat
+**Description**: "Analyze student data with AI assistance"
+**Icon**: Chart with chat bubble
+**Input**: Upload data file or describe data
+**Interface**: Chat-based Q&A about data
+**Output**: Insights, trends, recommendations
+**Plus Feature**: Advanced analytics
+
+---
+
+#### 77. Curriculum Gap Analysis
+**Description**: "Identify gaps in curriculum coverage"
+**Icon**: Document with gap
+**Input Fields**:
+- Standards to Cover
+- Current Curriculum (textarea)
+- Grade Level
+**Output**: Gap analysis with recommendations
+
+---
+
+#### 78. Learning Objective Writer
+**Description**: "Write clear, measurable learning objectives"
+**Icon**: Target with text
+**Input Fields**:
+- Standard or Topic
+- Grade Level
+- Bloom's Level (dropdown)
+**Output**: 3-5 measurable objectives
+
+---
+
+#### 79. Differentiation Station Ideas
+**Description**: "Create differentiated station/center activities"
+**Icon**: Multiple tables with labels
+**Input Fields**:
+- Learning Objective
+- Grade Level
+- Student Levels (checkboxes: Below, On, Above grade level)
+**Output**: Activity ideas for each level
+
+---
+
+#### 80. Student Grouping Suggestions
+**Description**: "Get suggestions for grouping students"
+**Icon**: People in groups
+**Input Fields**:
+- Grouping Purpose (dropdown: Skill level, Mixed ability, Interest, etc.)
+- Class Size
+- Student Characteristics (optional)
+**Output**: Grouping strategies and considerations
+
+---
+
+### PLUS & LABS TOOLS (Premium Features)
+
+#### 81. Raina - AI Instructional Coach
+**Description**: "Chat with Raina, your AI instructional coach"
+**Icon**: Robot or chat assistant
+**Interface**: Chat-based conversation
+**Features**:
+- Multi-turn conversations
+- Context awareness
+- Instructional coaching
+- Tool recommendations
+**Plus Feature**: Extended conversations and memory
+
+---
+
+#### 82. Custom Tool Creator (Labs)
+**Description**: "Build your own custom AI tools"
+**Icon**: Wrench and sparkle
+**Input Fields**:
+- Tool Name
+- Tool Purpose
+- Input Fields to Include
+- Output Format
+- Prompt Template
+**Output**: Custom tool added to your dashboard
+**Plus Feature**: Save and share custom tools
+
+---
+
+#### 83. Batch Feedback Writer (Labs)
+**Description**: "Provide AI-generated feedback on written assignments in batches"
+**Icon**: Stack of papers
+**Input Fields**:
+- Upload multiple student papers
+- Rubric/Criteria
+- Feedback Focus Areas
+**Output**: Individual feedback for each student
+**Plus Feature**: Personalize and send in batches
+
+---
+
+## COMMON TOOL INTERFACE DESIGN
+
+Every teacher tool follows this consistent interface pattern:
+
+### Tool Card (in grid view)
+
+**Card Container**:
+- **Size**: ~300px width, ~260px height
+- **Background**: White
+- **Border**: 1px solid light gray
+- **Border Radius**: 12px
+- **Shadow**: `0 2px 8px rgba(0,0,0,0.08)`
+- **Padding**: 20px
+- **Hover**: Lift (translateY -4px), stronger shadow
+
+**Card Content**:
+
+**Icon Area** (Top):
+- **Icon**: Gradient icon (48px)
+- **Background**: Circular gradient (purple/blue)
+- **Position**: Top-left
+
+**Badge Area** (Top-right):
+- **Plus Badge**: Gold "Plus" pill (if premium)
+- **New Badge**: Green "New" pill (if recent)
+- **Labs Badge**: Purple "Labs" pill (if beta)
+
+**Text Area** (Middle):
+- **Tool Name**: 
+  - Font: 1.125rem (18px), bold
+  - Color: Dark gray
+  - Lines: 1-2 max
+  
+- **Description**:
+  - Font: 0.875rem (14px), regular
+  - Color: Medium gray
+  - Lines: 2-3 max
+  - Clear, benefit-focused
+
+**Favorite Star** (Top-right):
+- **Icon**: Star (outline/filled)
+- **Color**: Gold when favorited
+- **Action**: Click to toggle favorite
+
+**Hover State**:
+- Card lifts: translateY(-4px)
+- Shadow increases
+- Purple border appears
+- "Open" button fades in
+
+---
+
+### Individual Tool Page Layout
+
+**Layout**: Side-by-side (40/60 or 50/50 split)
+
+---
+
+### LEFT PANEL: Input Section
+
+**Width**: 40-50% of screen
+**Background**: White or very light gray
+**Padding**: 32-40px
+**Sticky**: Yes (stays while scrolling)
+**Border Right**: 1px solid light gray
+
+**Panel Header**:
+- **Tool Icon**: Large icon (56px)
+- **Tool Name**: Bold, 1.5-2rem
+- **Description**: 2-3 sentences
+- **Show Exemplar**: Link or button
+  - "See an example →"
+  - Opens modal with sample output
+
+**Best Practices Banner** (top of form):
+- **Icon**: Lightbulb or info
+- **Background**: Light purple or yellow
+- **Text**: Quick tips for using this tool
+  - "Tip: The more specific you are, the better your results"
+  - "Remember: Review AI output for accuracy"
+- **Dismissible**: X button
+- **Shown**: First 2-3 uses, then remembered
+
+**Input Form**:
+
+**Form Structure**: Vertical stack of fields
+
+**Field Label**:
+- **Font**: 0.875rem (14px), semibold (600)
+- **Color**: Dark gray
+- **Required Indicator**: Red asterisk (*) if required
+- **Info Icon**: Hover tooltip with guidance
+
+**Field Input**:
+- **Text Input**: 
+  - Height: 44px
+  - Border: 1px solid gray
+  - Border Radius: 6px
+  - Font: 16px
+  - Padding: 10px 14px
+  
+- **Textarea**: 
+  - Min Height: 100px
+  - Resizable: Vertical
+  - Border: Same as text input
+  
+- **Dropdown**: 
+  - Height: 44px
+  - Custom styled arrow
+  - Searchable (if many options)
+
+**Help Text** (below input):
+- **Font**: 0.75rem (12px), regular
+- **Color**: Medium gray
+- **Content**: Guidance, examples, tips
+- **Example**: "e.g., 5th Grade Science - Ecosystems"
+
+**Character Counter** (textareas with limits):
+- **Display**: "0 / 500 characters"
+- **Position**: Bottom-right
+- **Color**: Gray → Orange (near limit) → Red (at limit)
+
+**File Upload** (when available):
+- **Drag & Drop Zone**: Dotted border box
+- **Text**: "Drag file here or click to upload"
+- **Accepted Types**: PDF, DOCX, TXT
+- **Max Size**: 5-10MB
+- **Preview**: Shows file name when uploaded
+
+**Generate Button**:
+- **Text**: "Generate" or "Create"
+- **Style**: Large purple button
+- **Width**: Full width of form
+- **Height**: 52px
+- **Icon**: Sparkle or magic wand
+- **Position**: Bottom of form
+- **States**:
+  - Default: Purple, enabled
+  - Disabled: Gray (form incomplete/invalid)
+  - Loading: Purple with spinner
+  - Success: Brief green flash
+
+**Additional Actions**:
+- **Clear Form**: Text link below button
+- **Save as Draft**: Text link (Plus feature)
+- **Use Example**: Button to pre-fill with example data
+
+---
+
+### RIGHT PANEL: Output Section
+
+**Width**: 50-60% of screen
+**Background**: White
+**Padding**: 32-40px
+**Scrollable**: Yes
+
+**Empty State** (before generation):
+- **Icon**: Large tool icon (100px) or illustration
+- **Message**: "Your [output] will appear here"
+- **Sub-message**: "Complete the form and click Generate"
+- **Tips Section**: 
+  - "💡 Pro Tips for great results:"
+  - Bullet list of best practices
+- **Exemplar Preview**: 
+  - "Not sure what to expect?"
+  - "View example output →" link
+
+**Loading State**:
+- **Spinner**: Large, centered spinner (48px)
+- **Color**: Purple
+- **Message**: "Generating your [output]..."
+- **Progress Text**: "This usually takes 15-30 seconds"
+- **Animation**: Smooth rotation
+- **Background**: Slight gray overlay
+
+**Output Display**:
+
+**Output Header**:
+- **Title**: "Your [Output Type]"
+- **Timestamp**: "Generated 3 minutes ago"
+- **Actions Row**:
+  - **Copy Button**: 📋 icon + "Copy"
+  - **Download Button**: ⬇️ icon + "Download" (dropdown: TXT, PDF, DOC)
+  - **Export Button**: ↗️ icon + "Export" (dropdown: Google Docs, Slides, Sheets)
+  - **Edit Button**: ✏️ icon + "Edit" (inline editing)
+  - **Regenerate**: 🔄 icon + "Try Again"
+  - **Save to Collection**: 📁 icon + "Save"
+  - **Share**: 🔗 icon + "Share" (copy link)
+
+**Output Content Area**:
+- **Background**: White or very light gray
+- **Border**: 1px solid light purple
+- **Border Radius**: 8px
+- **Padding**: 24-32px
+- **Typography**:
+  - Font: 16px, readable
+  - Line Height: 1.6
+  - Color: Dark gray
+  - Headings: Bold, larger
+  - Lists: Proper formatting
+  - Tables: Styled with borders
+
+**Output Formatting** (varies by tool):
+- **Lesson Plans**: Sections with headings
+- **Rubrics**: Formatted tables
+- **Quizzes**: Numbered questions with options
+- **Comments**: Paragraph format
+- **Presentations**: Slide-by-slide structure
+
+**AI Feedback Notice** (top of output):
+- **Banner**: Light blue or yellow background
+- **Icon**: Info icon or warning
+- **Text**: "AI-generated content. Review for accuracy and add your personal touch (the 80-20 approach)"
+- **Dismissible**: X button
+- **Link**: "Best practices →" (opens tips modal)
+
+**Refine Output Section** (below content):
+
+**Modification Options**:
+- **Make it longer**: Button
+- **Make it shorter**: Button
+- **Simplify language**: Button
+- **Increase rigor**: Button
+- **Adjust reading level**: Slider (K-12)
+- **Translate**: Language dropdown
+- **Regenerate completely**: Button
+
+**Continue with Raina** (Plus feature):
+- **Button**: "Continue with Raina" + robot icon
+- **Action**: Opens chat with output as context
+- **Use Case**: Ask questions, request modifications
+
+**Feedback Section**:
+- **Question**: "How was this output?"
+- **Rating**: 5 stars or thumbs up/down
+- **Follow-up**: "Tell us more" (optional textarea)
+- **Submit Button**: "Send Feedback"
+
+---
+
+## TOOL-SPECIFIC INTERFACES
+
+### Presentation Generator
+
+**Special Features**:
+
+**Slide Preview**:
+- **Visual**: Shows slides in sequence
+- **Format**: 
+  - Slide 1: Title slide
+  - Slide 2-N: Content slides
+- **Each Slide Shows**:
+  - Slide number
+  - Slide title
+  - Bullet points or content
+  - Speaker notes (if included)
+
+**Edit Mode**:
+- **Inline Editing**: Click any text to edit
+- **Reorder Slides**: Drag and drop
+- **Add Slides**: "+ Add Slide" button
+- **Delete Slides**: X on each slide
+
+**Export Options** (Plus):
+- **Google Slides**: One-click export, opens in new tab
+- **PowerPoint**: Download as PPTX
+- **PDF**: Download as PDF
+
+---
+
+### Rubric Generator
+
+**Special Interface**:
+
+**Table View**:
+- **Interactive Table**: Editable cells
+- **Structure**:
+  - Rows: Criteria (Editable)
+  - Columns: Performance levels (Editable)
+  - Cells: Descriptions (Editable)
+
+**Table Actions**:
+- **Add Row**: "+ Add Criterion" button
+- **Add Column**: "+ Add Level" button
+- **Delete Row**: X on each row
+- **Delete Column**: X on each column
+- **Drag to Reorder**: Rows reorderable
+
+**Export**:
+- **Excel**: Download as XLSX
+- **Google Sheets**: One-click export
+- **Word**: Download as table in DOC
+- **PDF**: Formatted rubric
+
+---
+
+### Multiple Choice Quiz
+
+**Quiz View**:
+
+**Question List**:
+- **Numbered**: Q1, Q2, Q3...
+- **Each Question Shows**:
+  - Question text
+  - Answer options (A, B, C, D)
+  - Correct answer indicated (✓ or highlight)
+  - Edit button
+
+**Edit Mode**:
+- **Inline Editing**: Click to edit
+- **Add Question**: "+ Add Question"
+- **Delete Question**: X button
+- **Reorder**: Drag and drop
+- **Change Correct Answer**: Click different option
+
+**Answer Key Toggle**:
+- **Show/Hide**: Toggle to hide correct answers
+- **For Printing**: Clean student version
+
+**Export** (Plus):
+- **Google Forms**: Creates quiz in Google Forms
+- **Quiz Platform**: Export to LMS
+- **Print Version**: PDF with answer key separate
+
+---
+
+### Report Card Comments
+
+**Comments View**:
+
+**Multiple Options Displayed**:
+- **Option 1**: First comment suggestion
+- **Option 2**: Second comment suggestion
+- **Option 3**: Third comment suggestion
+
+**Each Option Shows**:
+- **Comment Text**: Full comment
+- **Tone Indicator**: Tags (Positive, Constructive, Encouraging)
+- **Word Count**: "45 words"
+- **Actions**:
+  - "Use This" button
+  - "Edit" button
+  - "Regenerate" this option
+
+**Batch Mode** (Plus):
+- **Upload Student List**: CSV or paste names
+- **Generate for All**: Creates comment for each student
+- **Review & Personalize**: Edit each comment
+- **Export All**: Download all comments
+
+---
+
+### IEP Generator
+
+**Comprehensive Output**:
+
+**Tabbed Interface**:
+- **Tab 1**: Present Levels of Performance
+- **Tab 2**: Goals and Objectives
+- **Tab 3**: Accommodations
+- **Tab 4**: Services
+- **Tab 5**: Complete IEP Document
+
+**Each Tab Shows**:
+- Generated content for that section
+- Edit capability
+- Add/delete items
+- IDEA compliance notes
+
+**Legal Disclaimer** (always visible):
+- **Banner**: Yellow background
+- **Text**: "This is a draft to assist your IEP team. All content must be reviewed and approved by qualified personnel before implementation."
+- **Cannot Dismiss**: Always visible for legal compliance
+
+---
+
+## PREMIUM FEATURES
+
+### Plus-Only Features
+
+#### 1. Unlimited Generations
+- **Free**: Limited generations per month
+- **Plus**: Unlimited use of all tools
+
+#### 2. Full Output History
+- **Free**: Recent outputs only (30 days)
+- **Plus**: Complete history saved forever
+
+#### 3. One-Click Exports
+- **Google Workspace**: Docs, Slides, Sheets, Forms
+- **Microsoft Office**: Word, PowerPoint, Excel
+- **Direct Integration**: Opens in app, saves to drive
+
+#### 4. Raina Extended Conversations
+- **Free**: Basic questions
+- **Plus**: Multi-turn conversations with context
+
+#### 5. MagicSchool Labs
+- **Early Access**: Beta features
+- **Custom Tools**: Build your own tools
+- **Advanced Features**: Batch processing, analytics
+
+#### 6. Browser Extension
+- **Access**: 80+ tools from any website
+- **Highlight Text**: Right-click to use tools
+- **Quick Access**: Toolbar button
+
+#### 7. Priority Support
+- **Response Time**: Faster email support
+- **Live Chat**: Available to Plus users
+- **Dedicated Support**: Premium assistance
+
+---
+
+### Enterprise-Only Features
+
+#### 1. Single Sign-On (SSO)
+- **Providers**: Clever, ClassLink, Google, Microsoft
+- **Seamless**: One-click login for all users
+
+#### 2. LMS Integration
+- **Platforms**: Canvas, Schoology, Google Classroom
+- **Launch**: Open MagicSchool from LMS
+- **No Extra Tabs**: Embedded experience
+
+
+
+#### 4. Advanced Moderation
+- **PII Detection**: Automatic alerts
+- **Bias Detection**: Flag potentially biased content
+- **Error Detection**: Identify factual errors
+- **Smart Alerts**: Admin dashboard
+
+#### 5. Analytics Dashboard
+- **Adoption Metrics**: Track usage across district
+- **Engagement Data**: Student and teacher activity
+- **Tool Usage**: Most/least used tools
+- **ROI Reporting**: Time saved calculations
+- **Board Reports**: Executive summaries
+
+#### 6. Professional Development
+- **Onboarding**: Dedicated implementation support
+- **Training**: Custom PD for staff
+- **Webinars**: Live and on-demand
+- **Certification**: Courses for teachers
+
+---
+
+## DESIGN SPECIFICATIONS
+
+### Color Palette
+
+**Primary Colors**:
+- **Purple**: #6366F1 (primary brand)
+- **Dark Purple**: #4F46E5 (hover)
+- **Light Purple**: #C7D2FE (accents)
+- **Very Light Purple**: #EEF2FF (backgrounds)
+
+**Accent Colors**:
+- **Blue**: #3B82F6 (planning tools)
+- **Green**: #10B981 (assessment tools)
+- **Orange**: #F97316 (support tools)
+- **Yellow**: #F59E0B (communication tools)
+- **Pink**: #EC4899 (community tools)
+- **Gold**: #EAB308 (Plus features)
+
+**Feedback Colors**:
+- **Success**: #10B981
+- **Warning**: #F59E0B
+- **Error**: #EF4444
+- **Info**: #3B82F6
+
+**Backgrounds**:
+- **Page Background**: #F9FAFB
+- **Card Background**: #FFFFFF
+- **Panel Background**: #F9FAFB or #FAFAFA
+
+**Text Colors**:
+- **Primary Text**: #1F2937
+- **Secondary Text**: #6B7280
+- **Light Text**: #9CA3AF
+- **Link**: #6366F1
+
+---
+
+### Typography
+
+**Font Family**: Inter, system-ui, -apple-system, sans-serif
+
+**Font Sizes**:
+- **Page Heading**: 2rem (32px)
+- **Tool Name (card)**: 1.125rem (18px)
+- **Tool Name (page)**: 1.5-2rem (24-32px)
+- **Body Text**: 1rem (16px)
+- **Small Text**: 0.875rem (14px)
+- **Tiny Text**: 0.75rem (12px)
+
+**Font Weights**:
+- **Bold**: 700 (headings, tool names)
+- **Semibold**: 600 (labels, emphasis)
+- **Medium**: 500 (subheadings)
+- **Regular**: 400 (body text)
+
+**Line Heights**:
+- **Headings**: 1.2
+- **Body Text**: 1.6 (highly readable)
+- **Labels**: 1.4
+- **Tight**: 1.1 (stats, numbers)
+
+---
+
+### Spacing
+
+**Container Padding**: 40px (desktop), 24px (tablet), 20px (mobile)
+**Card Padding**: 20-24px
+**Section Margin**: 48px between major sections
+**Element Margin**: 16px between form elements
+**Input Spacing**: 16px between fields
+
+---
+
+### Border Radius
+
+**Cards**: 12px
+**Buttons**: 8px
+**Inputs**: 6px
+**Pills/Badges**: 999px (fully rounded)
+**Modals**: 16px
+
+---
+
+### Shadows
+
+**Cards**:
+```css
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+```
+
+**Card Hover**:
+```css
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+```
+
+**Modals**:
+```css
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+```
+
+**Buttons (Hover)**:
+```css
+box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+```
+
+---
+
+### Buttons
+
+**Primary Button**:
+- **Background**: Purple (#6366F1)
+- **Text**: White, semibold
+- **Height**: 44-52px
+- **Padding**: 12px 24px
+- **Border Radius**: 8px
+- **Hover**: Darker purple, slight shadow
+- **Active**: Even darker, scale(0.98)
+
+**Secondary Button**:
+- **Background**: White
+- **Border**: 2px solid purple
+- **Text**: Purple, semibold
+- **Height**: 44px
+- **Hover**: Light purple background
+
+**Text Button**:
+- **Background**: None
+- **Text**: Purple
+- **Hover**: Underline
+
+---
+
+### Icons
+
+**Sizes**:
+- **Card Icons**: 48px
+- **Page Icons**: 56px
+- **Button Icons**: 20px
+- **Inline Icons**: 16px
+
+**Style**: 
+- Gradient fills (purple/blue)
+- Consistent stroke weight
+- Modern, clean design
+
+---
+
+### Responsive Design
+
+**Desktop (> 1024px)**:
+- **Tools Grid**: 4 columns
+- **Tool Page**: Side-by-side (40/60)
+- **Full Navigation**: All visible
+
+**Tablet (768px - 1024px)**:
+- **Tools Grid**: 3 columns
+- **Tool Page**: Side-by-side or stacked
+- **Reduced Spacing**: Slightly tighter
+
+**Mobile (< 768px)**:
+- **Tools Grid**: 1-2 columns
+- **Tool Page**: Stacked (form then output)
+- **Sticky Generate**: Button sticky at bottom
+- **Simplified Nav**: Hamburger menu
+- **Touch Optimized**: Larger targets (48px min)
+
+---
+
+## SUMMARY
+
+### MagicSchool Teacher Tools System:
+
+**80+ Tools Organized into 6 Categories**:
+
+1. ✅ **Planning & Instruction** (~25 tools): Lesson plans, unit plans, activities, scaffolding, differentiation
+2. ✅ **Assessment & Feedback** (~15 tools): Quizzes, rubrics, report card comments, writing feedback
+3. ✅ **Student Support** (~12 tools): IEPs, BIPs, accommodations, interventions, social stories
+4. ✅ **Communication** (~10 tools): Emails, newsletters, recommendations, parent communication
+5. ✅ **Productivity** (~10 tools): Summarizing, rewriting, translating, proofreading
+6. ✅ **Community** (~8 tools): Team building, icebreakers, class culture
+
+**Common Design Pattern**:
+- **Tool Card**: 300×260px, icon + name + description, hover lift
+- **Tool Interface**: 40/60 split (form left, output right)
+- **Professional**: Clean, organized, teacher-focused
+- **Efficient**: Minimal fields (typically 3-5 inputs)
+- **Flexible**: Export options, edit capability, regenerate
+- **Quality**: 80-20 approach (AI does 80%, teacher refines 20%)
+
+**Key Features**:
+- ✅ **Free Tier**: All 80 tools available
+- ✅ **Plus Tier**: Unlimited generations, exports, Raina, Labs
+- ✅ **Enterprise**: SSO, LMS integration, analytics, custom tools
+- ✅ **Time Savings**: Teachers save 7-10 hours/week
+- ✅ **Privacy**: FERPA, COPPA, SOC 2 compliant
+- ✅ **Quality**: Education-specific, standards-aligned
+
+This comprehensive system provides teachers with purpose-built AI tools for every aspect of their work, from planning to assessment to communication, all with professional design, strong privacy protections, and real time savings.
+
