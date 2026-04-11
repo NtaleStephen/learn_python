@@ -10,5 +10,8 @@ word = "HELLO"
 
 for char in word:
     queue.append(char)
+queue.popleft()
+
+queue.append("!")
 
 print(queue)
