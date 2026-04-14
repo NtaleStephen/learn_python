@@ -1,0 +1,115 @@
+1. Python Basics
+	•	What is Python, features, use cases
+	•	Installing Python & IDE setup
+	•	Running Python scripts
+	•	Python syntax rules (indentation, comments)
+
+⸻
+
+2. Variables & Data Types
+	•	Variables and naming rules
+	•	Basic data types:
+	•	int
+	•	float
+	•	str
+	•	bool
+	•	Type conversion (casting)
+	•	Checking types (type())
+
+⸻
+
+3. Operators
+	•	Arithmetic operators (+, -, *, /, %, //, **)
+	•	Comparison operators (==, !=, >, <)
+	•	Logical operators (and, or, not)
+	•	Assignment operators (+=, -=, etc.)
+
+⸻
+
+4. Input & Output
+	•	print() function
+	•	Formatting output (f-strings)
+	•	input() function
+	•	Type conversion from input
+
+⸻
+
+5. Control Flow (Decision Making)
+	•	if, elif, else
+	•	Nested conditions
+	•	Boolean logic in decisions
+
+⸻
+
+6. Loops
+	•	for loops
+	•	while loops
+	•	break, continue, pass
+	•	Nested loops
+
+⸻
+
+7. Strings
+	•	String creation and indexing
+	•	Slicing strings
+	•	String methods:
+	•	.lower(), .upper()
+	•	.strip()
+	•	.replace()
+	•	.split()
+	•	String formatting
+
+⸻
+
+8. Lists
+	•	Creating lists
+	•	Indexing & slicing
+	•	List methods:
+	•	.append()
+	•	.remove()
+	•	.pop()
+	•	.sort()
+	•	Iterating through lists
+	•	List comprehensions
+
+⸻
+
+9. Tuples
+	•	Creating tuples
+	•	Differences between lists and tuples
+	•	Tuple unpacking
+
+⸻
+
+10. Sets
+	•	Creating sets
+	•	Unique values concept
+	•	Set operations:
+	•	union
+	•	intersection
+	•	difference
+
+⸻
+
+11. Dictionaries
+	•	Key-value pairs
+	•	Accessing values
+	•	Adding/removing items
+	•	Looping through dictionaries
+
+⸻
+
+12. Functions
+	•	Defining functions (def)
+	•	Parameters and arguments
+	•	Return values
+	•	Default parameters
+	•	Keyword arguments
+	•	Lambda functions (intro)
+
+⸻
+
+13. Modules & Packages
+	•	Importing modules (import, from)
+	•	Built-in modules (math, random)
+	•	Creating your own modules
