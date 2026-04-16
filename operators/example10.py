@@ -18,3 +18,4 @@ is_greater_than_10 = num > 10
 
 print("Both conditions satisfied:", is_even and is_greater_than_10)
 
+ 
