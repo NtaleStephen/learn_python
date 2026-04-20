@@ -1,15 +1,31 @@
-s = stack()
+class Stack:
+    def __init__(self):
+        self.items = []
 
-print(s.is_empty())
+    def is_empty(self):
+       return self.items == []
 
-s.push(10)
-s.push(20)
-s.push(30)
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()                                    
+
+    def peek(self):
+       return self.items[-1]
+    def size(self):
+       return len(self.items)
 
 
-print(s.peek())
-print(s.pop())
-print(s.peek())
+stack = Stack()
 
-print(s.size())
+print(stack.is_empty())
+stack.push(1)
+stack.push(2)
+stack.push(3)
 
+print(stack.peek())
+print(stack.size()) 
+print(stack.pop())
+print(stack.peek())
+print(stack.size())
