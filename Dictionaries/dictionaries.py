@@ -37,6 +37,14 @@ print(student.values())
 for key , value in student.items():
     print(key ,value)
 
+for value in student.values():
+    print(value)
+
+for key in student.keys():
+    print(key)
+
+
+
 # USING update() method
 # this adds or modifies entries inside the dictionary
 student.update({"age": 25})
